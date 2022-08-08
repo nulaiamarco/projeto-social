@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+body {
+    /* inserindo uma imagem de fundo, sem repetir, ficando no topo e centralizando */
+    background: url('../imagens/fundo-madeira.jpg') no-repeat top center;
+    background-size: cover; /* vai cobrir/ocupar a tela interira */
+    background-attachment: fixed;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+section#telefone {
+    /* as 4 linhas abaixo centralizam um objeto na tela */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* ...agora continuamos com as configurações normais */
+    height: 627px;
+    width: 311px;
+    background: url('../imagens/frame-iphone.png') no-repeat;
+}
+
+section#redes-sociais {
+    text-align: right;  /* colocando do lado direito as figuras das redes sociais */
+}
+
+iframe#tela {  /* configurando o posicionamento da imagem de celular neste iFrame */
+    position: relative;
+    top: 81px;
+    left: 22px;
+    width: 266px;
+    height: 469px;
+}
+
+section#redes-sociais > a > img {
+    width: 50px;
+    margin: 10px;
+    border-radius: 50%;  /* deixando a imagem redonda */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.400);
+    box-sizing: border-box;
+}
+
+section#redes-sociais img:hover {  /* quando passar o mouse sobre as figuras das redes sociais */
+    border: 2px solid rgba(255,255,255,0.637);
+    /* fazendo os botões movimentarem um pouco a cima e com uma pequena sombra abaixo */
+    transform: translate(-3px, -3px);
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.623);
+    transition: transform .2s, border .4s;  /* velocidade de movimentação do botão redondo e também da sombra */
+}
